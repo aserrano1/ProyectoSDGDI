@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <nav class = "nav nav-tabs">
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="../inicio.html">Regresar</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="./gestionarExistencia.html">Gestionar existencia</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./crearExistencia.html">Añadir existencia</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./crearInsumo.html">Crear insumo</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./buscarInsumo.html">Buscar  insumo</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./buscarExistencia.html">Buscar  existencia</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./utilidades.html">Utilidades</a>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-9 p-4">
+                <div class="row">
+                    <form id="formularioBuscarInsumo" class="card card-body col-md-4 me-2" >
+                        <legend>Buscar insumo</legend>
+                        <div class="form-group mb-2">
+                            <label class="form-label">Buscar por</label>
+                            <select id="criterioBusquedaInsumo" type="text" class="form-select">
+                                <option>codigo</option>
+                                <option>categoria</option>
+                                <option>etiqueta</option>
+                                <option>nombre</option>
+                                <option>unidad</option>
+                                <option>stock mínimo</option>
+                                <option>stock máximo</option>
+                                <option>costo</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="valorBusquedaInsumo" class="form-control" type="search" placeholder="Busqueda" list="coincidenciasInsumo">
+                            <datalist id="coincidenciasInsumo">
+                            </datalist>
+                        </div>
+                        <button class="btn btn-secondary mt-3" type="submit">Buscar</button>
+                    </form>
+                    <form id="formularioBuscarExistencia" class="card card-body col-md-4 ms-2">
+                        <legend>Buscar existencia</legend>
+                        <div class="form-group mb-2">
+                            <label class="form-label">Buscar por</label>
+                            <select id="criterioBusquedaExistencia" type="text" class="form-select">
+                                <option>codigo</option>
+                                <option>codigo de insumo</option>
+                                <option>cantidad inicial</option>}
+                                <option>cantidad actual</option>
+                                <option>ubicación</option>
+                                <option>fecha de ingreso</option>
+                                <option>fecha de vencimiento</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="valorBusquedaExistencia" class="form-control" type="search" placeholder="Busqueda" list="coincidenciasExistencia">
+                            <datalist id="coincidenciasExistencia">
+                            </datalist>
+                        </div>
+                        <button class="btn btn-secondary mt-3" type="submit">Buscar</button>
+                    </form>
+                </div>
+                <table id="tablaResultado" class="table table-hover">
+                </table>
+            </div>
+            <div class="col-md-3 p-4">
+                <form class="card card-body" id="formularioCrearExistencia">
+                    <legend>Existencia</legend>
+                    <div class="form-group mb-2">
+                        <label>Codigo</label>
+                        <input id="codigo" type="text" class="form-control" disabled>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Codigo de insumo</label>
+                        <input id="codigoInsumo" type="text" class="form-control" disabled>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Cantidad inicial</label>
+                        <input id="cantidad" type="text" class="form-control" disabled>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Cantidad actual</label>
+                        <input id="cantidadActual" type="text" class="form-control" disabled>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Cantidad</label>
+                        <input id="cantidadER" type="number" placeholder="Cantidad a extraer o reingresar" step="any" class="form-control" autofocus>
+                    </div>
+                    <button id="extraer" class="btn btn-primary mt-3">Extraer</button>
+                    <button id="reingresar" class="btn btn-primary mt-3">Reingresar</button>
+                </form>
+                <div id="listaExistencias"></div>
+            </div>
+        </div>    
+    </main>
+    <script src="./gestionarExistencia.js"></script>
+</body>
+</html>

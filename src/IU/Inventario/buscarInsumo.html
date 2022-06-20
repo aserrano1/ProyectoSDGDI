@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <nav class = "nav nav-tabs">
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="../inicio.html">Regresar</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./gestionarExistencia.html">Gestionar existencia</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./crearExistencia.html">Añadir existencia</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./crearInsumo.html">Crear insumo</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="./buscarInsumo.html">Buscar  insumo</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./buscarExistencia.html">Buscar  existencia</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./utilidades.html">Utilidades</a>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 p-4">
+                <form class="card card-body" id="buscarInsumo">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            Busqueda simple
+                            <input id="opcionBusquedaSimple" name="tipoBusqueda" type="radio" class="form-check-input" name="optionsRadios" checked>
+                        </label>
+                        <label class="form-check-label">
+                            Busqueda avanzada
+                            <input id="opcionBusquedaAvanzada" name="tipoBusqueda" type="radio" class="form-check-input" name="optionsRadios">
+                        </label>
+                    </div>
+                    <div id="busquedaSimple">
+                        <div class="form-group my-1">
+                            <label class="form-label">Buscar por</label>
+                            <select id="criterioBusquedaSimple" type="text" class="form-select mb-2">
+                                <option>codigo</option>
+                                <option>categoria</option>
+                                <option>etiqueta</option>
+                                <option>nombre</option>
+                                <option>cantidad</option>
+                                <option>unidad</option>
+                                <option>stock mínimo</option>
+                                <option>stock máximo</option>
+                                <option>costo</option>
+                            </select>
+                            <input id="valorBusquedaSimple" class="form-control mb-2" type="text" placeholder="Busqueda" list="coincidencias">
+                            <datalist id="coincidencias">
+                            </datalist>
+                        </div>
+                    </div>
+                    <div id="busquedaAvanzada" hidden>
+                        <div class="form-group mb-2">
+                            <input id="codigo" type="text" placeholder="Codigo" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="categoria" type="text" placeholder="Categoria" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="etiqueta" type="text" placeholder="Etiqueta" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="nombre" type="text" placeholder="Nombre" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="cantidad" type="number" step="any" placeholder="Cantidad" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="unidad" type="text" placeholder="Unidad" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="stock_minimo" type="number" step="any" placeholder="Stock minimo" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="stock_maximo" type="number" step="any" placeholder="Stock maximo" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="costo" type="number" step="any" placeholder="Costo" class="form-control">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mt-3">
+                        Buscar
+                    </button>
+                </form>
+                <div id="actualizar">
+                </div>
+            </div>
+            <div class="col-md-9">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Codigo</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Etiqueta</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Unidad</th>
+                            <th scope="col">Stock mínimo</th>
+                            <th scope="col">Stock máximo</th>
+                            <th scope="col">Costo</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id = "resultado">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="./buscarInsumo.js"></script>
+</body>
+</html>

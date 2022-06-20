@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./resetMeyer.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+</head>
+<body>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 p-4 my-auto">
+                <form class="card card-body" id="formularioCrearUsuario">
+                    <fieldset>
+                        <legend>Datos de cuenta</legend>
+                        <div class="form-group my-1">
+                            <input id="usuario" type="text" placeholder="Usuario" class="form-control" autofocus>
+                        </div>
+                        <div class="form-group my-1">
+                            <input id="contraseña" type="text" placeholder="Contraseña" class="form-control" autofocus>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        <div class="form-group my-1">
+                            <input id="nombre" type="text" placeholder="Nombre" class="form-control" autofocus>
+                        </div>
+                        <div class="form-group my-1">
+                            <input id="email" type="email" placeholder="e-mail" class="form-control" autofocus>
+                        </div>
+                        <div class="form-group my-1">
+                            <input id="direccion" type="text" placeholder="Direccion" class="form-control" autofocus>
+                        </div>
+                        <div class="form-group my-1">
+                            <input id="telefono" type="text" placeholder="Telefono" class="form-control" autofocus>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Datos empresariales</legend>
+                        <div class="form-group my-1">
+                            <input id="cargo" type="text" placeholder="Cargo" class="form-control" autofocus>
+                        </div>
+                    </fieldset>
+                    <button class="btn btn-primary mt-3">
+                        Registrarse
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="./crearUsuario.js"></script>
+</body>
+</html>

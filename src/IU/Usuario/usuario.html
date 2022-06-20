@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resetMeyer.css">
+    <link rel="stylesheet" href="../bootstrap.min.css">
+</head>
+<body>
+    <nav class = "nav nav-tabs">
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="../inicio.html">Regresar</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="./usuario.html">Datos de cuentaa</a>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 p-4 my-auto">
+                <h1 id="usuario"></h1>
+                <form class="card card-body" id="formularioActualizarUsuario">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        <div class="form-group my-1">
+                            <input id="nombre" type="text" placeholder="Nombre" class="form-control" autofocus>
+                        </div>
+                        <div class="form-group my-1">
+                            <input id="direccion" type="text" placeholder="Direccion" class="form-control" autofocus>
+                        </div>
+                        <div class="form-group my-1">
+                            <input id="telefono" type="text" placeholder="Telefono" class="form-control" autofocus>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Datos empresariales</legend>
+                        <div class="form-group my-1">
+                            <input id="cargo" type="text" placeholder="Cargo" class="form-control" autofocus>
+                        </div>
+                    </fieldset>
+                    <button class="btn btn-primary mt-3">
+                        Actualizar
+                    </button>
+                </form>
+            </div>
+            <div class="col-md-6 p-4 my-auto">
+                <form class="card card-body" id="formularioActualizarContraseña">
+                    <fieldset>
+                        <legend>Contraseña</legend>
+                        <div class="form-group my-1">
+                            <input id="nueva_contraseña" type="text" placeholder="Nueva contraseña" class="form-control" autofocus>
+                        </div>
+                        <div class="form-group my-1">
+                            <input id="confirmar_contraeña" type="text" placeholder="Repetir nueva contraseña" class="form-control" autofocus>
+                        </div>
+                    </fieldset>
+                    <button class="btn btn-primary mt-3">
+                        Cambiar contraseña
+                    </button>
+                </form>
+                <form class="card card-body" id="formularioActualizarCorreo">
+                    <fieldset>
+                        <legend>Correo</legend>
+                        <div class="form-group my-1">
+                            <input id="email" type="email" placeholder="E-mail" class="form-control" autofocus>
+                        </div>
+                    </fieldset>
+                    <button class="btn btn-primary mt-3">
+                        Actualizar correo 
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="./usuario.js"></script>
+</body>
+</html>
