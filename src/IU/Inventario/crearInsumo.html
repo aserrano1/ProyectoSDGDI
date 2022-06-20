@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resetMeyer.css">
+    <link rel="stylesheet" href="../bootstrap.min.css">
+</head>
+<body>
+    <nav class = "nav nav-tabs">
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="../inicio.html">Regresar</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./gestionarExistencia.html">Gestionar existencia</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./crearExistencia.html">Añadir existencia</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="./crearInsumo.html">Crear insumo</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./buscarInsumo.html">Buscar  insumo</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./buscarExistencia.html">Buscar  existencia</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./utilidades.html">Utilidades</a>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 p-4 my-auto">
+                <form class="card card-body" id="formularioCrearInsumo">
+                    <legend>Nuevo insumo</legend>
+                    <div class="form-group mb-2">
+                        <label>Codigo*</label>
+                        <input id="codigo" type="text" placeholder="Codigo del insumo" class="form-control" autofocus>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Categoria*</label>
+                        <input id="categoria" type="text" list="listaCategoria" placeholder="Categoria del insumo" class="form-control" autofocus>
+                        <datalist id="listaCategoria">
+                        </datalist>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Etiqueta*</label>
+                        <input id="etiqueta" type="text" list="listaEtiqueta" placeholder="Etiqueta del insumo" class="form-control" autofocus>
+                        <datalist id="listaEtiqueta">
+                        </datalist>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Nombre*</label>
+                        <input id="nombre" type="text" placeholder="Nombre del insumo" class="form-control">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Unidad*</label>
+                        <input id="unidad" type="text" list="listaUnidad" placeholder="Unidad de medida" class="form-control" autofocus>
+                        <datalist id="listaUnidad">
+                        </datalist>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Stock mínimo*</label>
+                        <input id="stock_minimo" type="number" step="any" placeholder="Stock mínimo del insumo" class="form-control">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Stock máximo*</label>
+                        <input id="stock_maximo" type="number" step="any" placeholder="Stock máximo del insumo" class="form-control">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Costo*</label>
+                        <input id="costo" type="number" step="any" placeholder="Costo por unidad del insumo" class="form-control">
+                    </div>
+                    <button class="btn btn-primary mt-3">
+                        Crear
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="./crearInsumo.js"></script>
+</body>
+</html>

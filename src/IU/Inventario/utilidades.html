@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resetMeyer.css">
+    <link rel="stylesheet" href="../bootstrap.min.css">
+</head>
+<body>
+    <nav class = "nav nav-tabs">
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="../inicio.html">Regresar</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./gestionarExistencia.html">Gestionar existencia</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./crearExistencia.html">Añadir existencia</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./crearInsumo.html">Crear insumo</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./buscarInsumo.html">Buscar  insumo</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./buscarExistencia.html">Buscar  existencia</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="./utilidades.html">Utilidades</a>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 p-4">
+                <form class="card card-body" id="formularioActualizarUsuario">
+                    <h1>Gestionar categorias</h1>
+                    <fieldset>
+                        <legend>Agregar categoria</legend>
+                        <div class="form-group mb-2">
+                            <label>Nombre</label>
+                            <input id="agregarCategoriaNombre" type="text" placeholder="Nombre de la categoria" class="form-control" autofocus>
+                        </div>
+                        <button id="agregarCategoria" class="btn btn-primary mt-3">
+                            Agregar
+                        </button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Modificar categoria</legend>
+                        <div class="form-group mb-2">
+                            <label>Categoria actual</label>
+                            <input id="categoriaActual" type="text" list="listaCategoriaActual" placeholder="Nombre actual de la categoria" class="form-control" autofocus>
+                            <datalist id="listaCategoriaActual">
+                            </datalist>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label>Nombre</label>
+                            <input id="modificarCategoriaNombre" type="text" placeholder="Nuevo nombre" class="form-control" autofocus>
+                        </div>
+                        <button id="modificarCategoria" class="btn btn-primary mt-3">
+                            Modificar
+                        </button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Eliminar categoria</legend>
+                        <div class="form-group mb-2">
+                            <label>Nombre</label>
+                            <input id="eliminarCategoriaNombre" type="text" list="listaEliminarCategoriaNombre" placeholder="Nombre de la categoria" class="form-control">
+                            <datalist id="listaEliminarCategoriaNombre">
+                            </datalist>
+                        </div>
+                        <button id="eliminarCategoria" class="btn btn-primary mt-3">
+                            eliminar
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-md-3 p-4">
+                <form class="card card-body">
+                    <h1>Gestionar etiquetas</h1>
+                    <fieldset>
+                        <legend>Agregar etiqueta</legend>
+                        <div class="form-group mb-2">
+                            <label>Nombre</label>
+                            <input id="agregarEtiquetaNombre" type="text" placeholder="Nombre de la etiqueta" class="form-control" autofocus>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label>Categoria</label>
+                            <input id="agregarEtiquetaCategoria" type="text" list="listaAgregarEtiquetaCategoria" placeholder="Categoria de la etiqueta" class="form-control" autofocus>
+                            <datalist id="listaAgregarEtiquetaCategoria">
+                            </datalist>
+                        </div>
+                        <button id="agregarEtiqueta" class="btn btn-primary mt-3">
+                            Agregar
+                        </button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Modificar etiqueta</legend>
+                        <div class="form-group mb-2">
+                            <label>Etiqueta actual</label>
+                            <input id="etiquetaActual" type="text" list="listaEtiquetaActual" placeholder="Nombre actual de la etiqueta" class="form-control">
+                            <datalist id="listaEtiquetaActual">
+                            </datalist>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label>Nombre</label>
+                            <input id="modificarEtiquetaNombre" type="text" placeholder="Nuevo nombre" class="form-control" autofocus>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label>Categoria</label>
+                            <input id="modificarEtiquetaCategoria" type="text" list="listaModificarEtiquetaCategoria" placeholder="Nueva categoria" class="form-control">
+                            <datalist id="listaModificarEtiquetaCategoria">
+                            </datalist>
+                        </div>
+                        <button id="modificarEtiqueta" class="btn btn-primary mt-3">
+                            Modificar
+                        </button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Eliminar etiqueta</legend>
+                        <div class="form-group mb-2">
+                            <label>Nombre</label>
+                            <input id="eliminarEtiquetaNombre" type="text" list="listaEliminarEtiquetaNombre" placeholder="Nombre de la etiqueta" class="form-control">
+                            <datalist id="listaEliminarEtiquetaNombre">
+                            </datalist>
+                        </div>
+                        <button id="eliminarEtiqueta" class="btn btn-primary mt-3">
+                            eliminar
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-md-3 p-4">
+                <form class="card card-body">
+                    <h1>Gestionar unidades</h1>
+                    <fieldset>
+                        <legend>Agregar unidad</legend>
+                        <div class="form-group mb-2">
+                            <label>Nombre</label>
+                            <input id="agregarUnidadNombre" type="text" placeholder="Nombre de la unidad" class="form-control" autofocus>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label>Simbolo</label>
+                            <input id="agregarUnidadSimbolo" type="text" placeholder="Simbolo de la unidad" class="form-control" autofocus>
+                        </div>
+                        <button id="agregarUnidad" class="btn btn-primary mt-3">
+                            Agregar
+                        </button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Modificar unidad</legend>
+                        <div class="form-group mb-2">
+                            <label>Unidad actual</label>
+                            <input id="unidadActual" type="text" list="listaUnidadActual" placeholder="Nombre actual de la unidad" class="form-control">
+                            <datalist id="listaUnidadActual">
+                            </datalist>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label>Nombre</label>
+                            <input id="modificarUnidadNombre" type="text" placeholder="Nuevo nombre" class="form-control" autofocus>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label>Simbolo</label>
+                            <input id="modificarUnidadSimbolo" type="text" placeholder="Nuevo simbolo" class="form-control" autofocus>
+                        </div>
+                        <button id="modificarUnidad" class="btn btn-primary mt-3">
+                            Modificar
+                        </button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Eliminar unidad</legend>
+                        <div class="form-group mb-2">
+                            <label>Nombre</label>
+                            <input id="eliminarUnidadNombre" type="text" list="listaEliminarUnidadNombre" placeholder="Nombre de la unidad" class="form-control">
+                            <datalist id="listaEliminarUnidadNombre">
+                            </datalist>
+                        </div>
+                        <button id="eliminarUnidad" class="btn btn-primary mt-3">
+                            eliminar
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-md-3 p-4">
+                <form class="card card-body">
+                    <h1>Gestionar ubicaciones</h1>
+                    <fieldset>
+                        <legend>Agregar ubicación</legend>
+                        <div class="form-group mb-2">
+                            <label>Nombre</label>
+                            <input id="agregarUbicacionNombre" type="text" placeholder="Nombre de la ubicación" class="form-control" autofocus>
+                        </div>
+                        <button id="agregarUbicacion" class="btn btn-primary mt-3">
+                            Agregar
+                        </button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Modificar ubicación</legend>
+                        <div class="form-group mb-2">
+                            <label>Ubicación actual</label>
+                            <input id="ubicacionActual" type="text" list="listaUbicacionActual" placeholder="Nombre actual de la ubicación" class="form-control">
+                            <datalist id="listaUbicacionActual">
+                            </datalist>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label>Nombre</label>
+                            <input id="modificarUbicacionNombre" type="text" placeholder="Nuevo nombre" class="form-control" autofocus>
+                        </div>
+                        <button id="modificarUbicacion" class="btn btn-primary mt-3">
+                            Modificar
+                        </button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Eliminar ubicación</legend>
+                        <div class="form-group mb-2">
+                            <label>Nombre</label>
+                            <input id="eliminarUbicacionNombre" type="text" list="listaEliminarUbicacionNombre" placeholder="Nombre de la ubicacion" class="form-control">
+                            <datalist id="listaEliminarUbicacionNombre">
+                            </datalist>
+                        </div>
+                        <button id="eliminarUbicacion" class="btn btn-primary mt-3">
+                            eliminar
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="./utilidades.js"></script>
+</body>
+</html>
